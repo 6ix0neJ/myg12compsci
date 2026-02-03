@@ -5,10 +5,27 @@
 
     <meta charset="UTF-8">
     <title>Num Guess!</title>
+    <style>
+        @keyframes backgroundFade {
+            0% {
+                background-color: #0d6378;
+            }
+            50% {
+                background-color: #077580;
+            }
+            100% {
+                background-color: #0d6378;
+            }
+        }
+
+        body {
+            animation: backgroundFade 4s ease-in-out infinite;
+        }
+    </style>
 
 </head>
 
-<body style="background-color: #0d6378;">
+<body>
 <textfont style="font-family: Verdana, sans-serif;">
     <textcolor style="color: #fb95ff;">
         <h1>Number Guessing Game</h1>
