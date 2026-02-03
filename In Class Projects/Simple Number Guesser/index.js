@@ -1,4 +1,3 @@
-//const prompt = require("prompt-sync")();
 const iWinURL = "https://image.pngaaa.com/329/1226329-middle.png";
 const iLoseURL = "https://www.vhv.rs/dpng/d/456-4569494_stick-people-png-win-win-vs-win-loose.png";
 
