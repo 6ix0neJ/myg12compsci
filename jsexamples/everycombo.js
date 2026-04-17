@@ -1,4 +1,4 @@
-let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+let arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
 
 permute(arr, arr.length);
 function permute (arr,r, index = 0) {
