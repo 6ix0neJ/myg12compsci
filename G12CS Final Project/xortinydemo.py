@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 traininginterval = int(input("Enter Training Interval: "))
-traindisp = int(input("Display Training Progress? (y/n): "))#.lower()
+traindisp = str(input("Display Training Progress? (y/n): "))#.lower()
 print("Training...")
 
 # sigmoid activation
