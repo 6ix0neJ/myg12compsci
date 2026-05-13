@@ -6,9 +6,8 @@ import random
 import math
 import matplotlib.pyplot as plt
 
-
 traininginterval = int(input("Enter Training Interval: "))
-traindisp = str(input("Display Training Progress? (y/n): "))#.lower()
+traindisp = str(input("Display Training Progress? (y/n): ")).lower()
 print("Training...")
 
 # sigmoid activation
@@ -41,11 +40,8 @@ b2 = random.random()
 b3 = random.random()
 
 errors = []
-
 learning_rate = 0.5
-
 plt.ion()
-
 fig, ax = plt.subplots()
 
 # training loop
@@ -87,10 +83,10 @@ for epoch in range(traininginterval):
         w3 += x1 * d_h2 * learning_rate
         w4 += x2 * d_h2 * learning_rate
 
-        errors.append(total_error)
+    errors.append(total_error)
 
         # update graph every 100 epochs
-        if epoch % 100 == 0:
+    if epoch % 100 == 0:
             ax.clear()
 
             ax.plot(errors)
@@ -103,7 +99,7 @@ for epoch in range(traininginterval):
             fig.canvas.flush_events()
             plt.pause(0.001)
 
-    if traindisp == "y" or "Y":
+    if traindisp == "y":
 
         if epoch % 1000 == 0:
             accuracy = (1 - (total_error / 4)) * 100
@@ -113,15 +109,14 @@ for epoch in range(traininginterval):
         if epoch % 5000 == 0:
             print("Weight 1: ", w1, "Weight 2: ", w2, "Weight 3: ", w3, "Weight 4: ", w4)
 
-    elif traindisp == "n" or "N":
+    elif traindisp == "n":
 
         if epoch % 10000 == 0:
             print("Still training... Epoch: ", epoch)
 
-    plt.ioff()
-    plt.show()
 
-
+plt.ioff()
+plt.show()
 
 # test
 for inputs, target in training_data:
