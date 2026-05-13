@@ -1,10 +1,14 @@
+#
+# Code By Jibril Richardson
+# Github: 6ix0neJ
+#
 import random
 import math
 import matplotlib.pyplot as plt
 
 
 traininginterval = int(input("Enter Training Interval: "))
-traindisp = str(input("Display Training Progress? (y/n): "))#.lower()
+traindisp = str(input("Display Training Progress? (y/n): "))
 print("Training...")
 
 # sigmoid activation
