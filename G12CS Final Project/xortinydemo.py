@@ -1,5 +1,5 @@
 #
-# Code By Jibril Richardson
+# Code by Jibril Richardson
 # Github: 6ix0neJ
 #
 import random
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 
 traininginterval = int(input("Enter Training Interval: "))
-traindisp = str(input("Display Training Progress? (y/n): "))
+traindisp = str(input("Display Training Progress? (y/n): "))#.lower()
 print("Training...")
 
 # sigmoid activation
@@ -89,6 +89,8 @@ for epoch in range(traininginterval):
 
         errors.append(total_error)
 
+
+
         # update graph every 100 epochs
         if epoch % 100 == 0:
             ax.clear()
@@ -103,9 +105,6 @@ for epoch in range(traininginterval):
             fig.canvas.flush_events()
             plt.pause(0.001)
 
-    plt.ioff()
-    plt.show()
-
     if traindisp == "y" or "Y":
 
         if epoch % 1000 == 0:
@@ -116,7 +115,14 @@ for epoch in range(traininginterval):
         if epoch % 5000 == 0:
             print("Weight 1: ", w1, "Weight 2: ", w2, "Weight 3: ", w3, "Weight 4: ", w4)
 
-    
+    elif traindisp == "n" or "N":
+
+        if epoch % 10000 == 0:
+            print("Still training... Epoch: ", epoch)
+
+    plt.ioff()
+    plt.show()
+
 
 
 
