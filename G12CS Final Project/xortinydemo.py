@@ -89,8 +89,6 @@ for epoch in range(traininginterval):
 
         errors.append(total_error)
 
-
-
         # update graph every 100 epochs
         if epoch % 100 == 0:
             ax.clear()
@@ -122,7 +120,6 @@ for epoch in range(traininginterval):
 
     plt.ioff()
     plt.show()
-
 
 
 
